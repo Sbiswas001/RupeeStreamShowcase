@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RupeeStream — Privacy-Focused, Local-First Personal Finance Manager</title>
+  <meta name="description" content="RupeeStream is a local-first Android personal finance application by Sayan Biswas. Your finances, your device, your control. Zero tracking, zero ads, encrypted backups.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RupeeStream — Privacy-Focused Personal Finance">
+  <meta property="og:description" content="Local-first personal finance application for Android. Track expenses, budgets, recurring bills, and safe-to-spend with total on-device privacy.">
+  <meta property="og:image" content="assets/branding/logo.svg">
+  <meta name="theme-color" content="#10B981">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/branding/favicon.svg">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="RupeeStream Home">
+        <img src="assets/branding/logo.svg" alt="RupeeStream Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-name">RupeeStream</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="privacy-policy.html" class="nav-link">Privacy</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-glow-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge-pill">Local-First Android Finance</span>
+          <h1 class="hero-title">Your finances. Your device. <span>Your control.</span></h1>
+          <p class="hero-tagline">A privacy-focused, local-first personal finance manager.</p>
+          <p class="hero-philosophy">
+            All your financial records are stored and processed directly on your Android device. No server-side financial database, zero advertising SDKs, and zero profiling.
+          </p>
+          <div class="hero-actions">
+            <!-- Google Play Store Button (Placeholder configured for sayan.apps.rupeestream) -->
+            <a href="https://play.google.com/store/apps/details?id=sayan.apps.rupeestream" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.61-.986V2.8c0-.369.215-.718.609-.986zm11.254 11.257l2.257-2.257-9.432-5.445 7.175 7.702zm2.257-2.257l1.96 1.132a1.868 1.868 0 0 1 0 3.238l-1.96 1.132-2.583-2.751 2.583-2.751zm-4.84 3.265l-7.175 7.702 9.432-5.445-2.257-2.257z"/></svg>
+              Get RupeeStream on Google Play
+            </a>
+            <a href="#features" class="btn btn-secondary">Explore Features</a>
+          </div>
+        </div>
+
+        <div class="hero-preview">
+          <img src="assets/screenshots/mockup-dashboard.svg" alt="RupeeStream Android App Dashboard Preview" class="hero-mockup-frame" width="360" height="720">
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Spotlight Section -->
+    <section class="section section-alt" id="privacy">
+      <div class="container">
+        <div class="privacy-spotlight-card">
+          <div class="privacy-spotlight-grid">
+            <div>
+              <span class="badge-pill">Privacy Principles</span>
+              <h2 class="section-title">Local-first by design.</h2>
+              <p class="section-subtitle">
+                RupeeStream does not operate a remote server that stores your financial records. Everything you track stays in your hands.
+              </p>
+
+              <div class="privacy-points">
+                <div class="privacy-point">
+                  <div class="privacy-point-icon">✓</div>
+                  <div>
+                    <h4>100% On-Device Financial Storage</h4>
+                    <p>Transactions, account balances, budgets, and goals are stored in your device's private SQLite database.</p>
+                  </div>
+                </div>
+
+                <div class="privacy-point">
+                  <div class="privacy-point-icon">✓</div>
+                  <div>
+                    <h4>Encrypted Google Drive Backups</h4>
+                    <p>Optional backups are encrypted on-device with AES-256-GCM before upload, stored solely in your private <code>appDataFolder</code>.</p>
+                  </div>
+                </div>
+
+                <div class="privacy-point">
+                  <div class="privacy-point-icon">✓</div>
+                  <div>
+                    <h4>Zero Advertising &amp; Zero Trackers</h4>
+                    <p>No advertising SDKs, no advertising identifiers, no third-party profiling, and no data brokers.</p>
+                  </div>
+                </div>
+
+                <div class="privacy-point">
+                  <div class="privacy-point-icon">✓</div>
+                  <div>
+                    <h4>On-Device Intelligence</h4>
+                    <p>Transaction predictions, categorization assistance, and financial health scores run locally without transmitting data to remote AI APIs.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 32px;">
+                <a href="privacy-policy.html" class="btn btn-secondary btn-sm">Read Full Privacy Policy →</a>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+              <img src="assets/screenshots/mockup-privacy-backup.svg" alt="AES-256-GCM On-Device Encryption to Google Drive appDataFolder" style="border-radius: 18px; box-shadow: var(--shadow-md); width: 100%; max-width: 480px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-pill">Capabilities</span>
+          <h2 class="section-title">Crafted for mindful money management.</h2>
+          <p class="section-subtitle">
+            All the powerful tools you need to budget, track, and understand your finances without trading away your privacy.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1. Transactions -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/transactions.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Transaction Tracking</h3>
+            <p class="feature-desc">Record income and expenses seamlessly with rich descriptions, categories, payment instruments, and transaction attachments.</p>
+          </article>
+
+          <!-- 2. Accounts -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/accounts.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Accounts Management</h3>
+            <p class="feature-desc">Manage bank accounts, cash wallets, credit cards, and UPI apps in one unified balance overview.</p>
+          </article>
+
+          <!-- 3. Budgets -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/budgets.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Smart Budgets</h3>
+            <p class="feature-desc">Set flexible monthly spending limits across categories to stay disciplined before you overspend.</p>
+          </article>
+
+          <!-- 4. Recurring Payments -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/recurring.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Recurring Payments &amp; Bills</h3>
+            <p class="feature-desc">Stay on top of recurring subscriptions, utility bills, and EMI schedules with on-device local notifications.</p>
+          </article>
+
+          <!-- 5. Goals -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/goals.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Financial Goals</h3>
+            <p class="feature-desc">Define savings targets, track milestone contributions, and monitor your progress toward life goals.</p>
+          </article>
+
+          <!-- 6. Financial Insights -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/insights.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Financial Insights</h3>
+            <p class="feature-desc">Understand spending habits and cash flow trends through intuitive visual breakdowns computed on your phone.</p>
+          </article>
+
+          <!-- 7. Safe-to-Spend -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/safe-to-spend.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Safe-to-Spend</h3>
+            <p class="feature-desc">Instant dynamic calculation of how much discretionary money you can safely spend today without falling short on bills.</p>
+          </article>
+
+          <!-- 8. Financial Health -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/health.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Financial Health Assessment</h3>
+            <p class="feature-desc">Get an on-device score evaluating savings consistency, debt ratios, and budget adherence with actionable tips.</p>
+          </article>
+
+          <!-- 9. Prediction Assistance -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/insights.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Local Categorization Assistance</h3>
+            <p class="feature-desc">Intelligent transaction predictions and categorization assistance computed locally on-device without remote AI APIs.</p>
+          </article>
+
+          <!-- 10. Backup & Restore -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/backup.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Google Drive Backup</h3>
+            <p class="feature-desc">Optional encrypted backup to your private Google Drive <code>appDataFolder</code> with AES-256-GCM and key recovery.</p>
+          </article>
+
+          <!-- 11. Security & Biometrics -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/security.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">App Lock &amp; Biometrics</h3>
+            <p class="feature-desc">Protect your financial records with Android BiometricPrompt, PIN authentication, and shoulder-surfing privacy mode.</p>
+          </article>
+
+          <!-- 12. Widgets -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <img src="assets/icons/widgets.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="feature-title">Home-Screen Widgets</h3>
+            <p class="feature-desc">Glance at today's Safe-to-Spend balance and log transactions quickly right from your Android home screen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RupeeStream+ Upgrade Section -->
+    <section class="section section-alt" id="premium">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-pill">Personalization</span>
+          <h2 class="section-title">Upgrade to RupeeStream+</h2>
+          <p class="section-subtitle">
+            An optional, one-time lifetime purchase designed for personal finance enthusiasts who want extended personalization.
+          </p>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-badge badge-pill">Lifetime Access</div>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary);">RupeeStream+</h3>
+          <div class="pricing-amount">
+            <span class="pricing-currency">₹</span>99
+          </div>
+          <div class="pricing-term">One-time purchase • No subscriptions • Zero ads</div>
+
+          <ul class="pricing-features-list">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Custom app icons and tailored theme accents</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Advanced personalization features</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Processed securely through Google Play Billing</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Lifetime entitlement — keep it forever on your Google account</span>
+            </li>
+          </ul>
+
+          <a href="https://play.google.com/store/apps/details?id=sayan.apps.rupeestream" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Get RupeeStream on Google Play
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">
+            <img src="assets/branding/logo.svg" alt="" width="28" height="28">
+            RupeeStream
+          </div>
+          <p class="footer-brand-desc">
+            A privacy-focused, local-first personal finance manager for Android developed by Sayan Biswas.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h5>Navigation</h5>
+            <ul class="footer-nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <h5>Trust &amp; Legal</h5>
+            <ul class="footer-nav-links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="support.html">Support &amp; FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <h5>Contact</h5>
+            <ul class="footer-nav-links">
+              <li><a href="mailto:sbiswas001.tech@gmail.com">sbiswas001.tech@gmail.com</a></li>
+              <li><span>Package: sayan.apps.rupeestream</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sayan Biswas · All rights reserved.</p>
+        <p>Built for privacy. No ads. No tracking.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

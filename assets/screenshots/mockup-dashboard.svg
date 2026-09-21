@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 840" width="100%" height="100%">
+  <defs>
+    <linearGradient id="phoneBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F1713"/>
+      <stop offset="100%" stop-color="#070A09"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18231E"/>
+      <stop offset="100%" stop-color="#121A16"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Phone Body / Bezel -->
+  <rect x="10" y="10" width="400" height="820" rx="44" fill="url(#phoneBg)" stroke="#23322B" stroke-width="6"/>
+  
+  <!-- Camera Pill / Dynamic Island -->
+  <rect x="160" y="24" width="100" height="20" rx="10" fill="#000000"/>
+  <circle cx="236" cy="34" r="5" fill="#151E19"/>
+
+  <!-- Status Bar -->
+  <text x="44" y="38" fill="#9CA3AF" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">09:41</text>
+  <path d="M360 30h16v8h-16z M378 33v2" stroke="#9CA3AF" fill="none" stroke-width="1.5"/>
+
+  <!-- App Bar -->
+  <g transform="translate(36, 68)">
+    <rect width="36" height="36" rx="10" fill="#10B981" fill-opacity="0.15"/>
+    <text x="18" y="24" text-anchor="middle" fill="#10B981" font-family="system-ui, sans-serif" font-weight="bold" font-size="18">₹</text>
+    <text x="48" y="24" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.5">RupeeStream</text>
+    
+    <!-- Lock Badge Indicator -->
+    <rect x="296" y="4" width="52" height="26" rx="13" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="322" y="21" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">LOCAL</text>
+  </g>
+
+  <!-- Hero Card: Safe-to-Spend -->
+  <g transform="translate(36, 126)" filter="url(#cardShadow)">
+    <rect width="348" height="156" rx="24" fill="url(#cardGrad)" stroke="#1F3329" stroke-width="1.5"/>
+    <text x="24" y="36" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="13" font-weight="500">SAFE-TO-SPEND TODAY</text>
+    
+    <text x="24" y="80" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="34" font-weight="800" letter-spacing="-1">₹ 14,850</text>
+    
+    <!-- Progress Bar -->
+    <rect x="24" y="104" width="300" height="8" rx="4" fill="#192821"/>
+    <rect x="24" y="104" width="220" height="8" rx="4" fill="url(#emeraldGrad)"/>
+    
+    <text x="24" y="132" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="600">₹22,400 monthly budget</text>
+    <text x="324" y="132" text-anchor="end" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">66% left</text>
+  </g>
+
+  <!-- Financial Health & Insights Split -->
+  <g transform="translate(36, 302)">
+    <!-- Card 1: Health Score -->
+    <rect x="0" y="0" width="166" height="110" rx="20" fill="url(#cardGrad)" stroke="#1F3329" stroke-width="1.5"/>
+    <text x="18" y="32" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Financial Health</text>
+    <text x="18" y="70" fill="#34D399" font-family="system-ui, sans-serif" font-size="28" font-weight="800">92<tspan font-size="16" fill="#9CA3AF" font-weight="500">/100</tspan></text>
+    <text x="18" y="94" fill="#10B981" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Excellent • On track</text>
+
+    <!-- Card 2: Upcoming Bills -->
+    <rect x="182" y="0" width="166" height="110" rx="20" fill="url(#cardGrad)" stroke="#1F3329" stroke-width="1.5"/>
+    <text x="200" y="32" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Upcoming Bills</text>
+    <text x="200" y="70" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="28" font-weight="800">₹ 2,499</text>
+    <text x="200" y="94" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Fiber Broadband (3d)</text>
+  </g>
+
+  <!-- Recent Transactions Section -->
+  <g transform="translate(36, 436)">
+    <text x="4" y="20" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Recent Activity</text>
+    <text x="344" y="20" text-anchor="end" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="600">View All</text>
+
+    <!-- Item 1 -->
+    <g transform="translate(0, 36)">
+      <rect width="348" height="66" rx="16" fill="url(#cardGrad)" stroke="#1A2822" stroke-width="1"/>
+      <circle cx="34" cy="33" r="18" fill="#10B981" fill-opacity="0.15"/>
+      <text x="34" y="38" text-anchor="middle" fill="#34D399" font-size="14">🛒</text>
+      <text x="64" y="28" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Organic Supermarket</text>
+      <text x="64" y="48" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Groceries • On-device auto-tag</text>
+      <text x="328" y="38" text-anchor="end" fill="#F87171" font-family="system-ui, sans-serif" font-size="14" font-weight="700">- ₹ 1,420</text>
+    </g>
+
+    <!-- Item 2 -->
+    <g transform="translate(0, 114)">
+      <rect width="348" height="66" rx="16" fill="url(#cardGrad)" stroke="#1A2822" stroke-width="1"/>
+      <circle cx="34" cy="33" r="18" fill="#10B981" fill-opacity="0.15"/>
+      <text x="34" y="38" text-anchor="middle" fill="#34D399" font-size="14">⚡</text>
+      <text x="64" y="28" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="600">State Electricity Board</text>
+      <text x="64" y="48" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Utilities • Recurring bill</text>
+      <text x="328" y="38" text-anchor="end" fill="#F87171" font-family="system-ui, sans-serif" font-size="14" font-weight="700">- ₹ 890</text>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(0, 192)">
+      <rect width="348" height="66" rx="16" fill="url(#cardGrad)" stroke="#1A2822" stroke-width="1"/>
+      <circle cx="34" cy="33" r="18" fill="#10B981" fill-opacity="0.15"/>
+      <text x="34" y="38" text-anchor="middle" fill="#34D399" font-size="14">💼</text>
+      <text x="64" y="28" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Consulting Payout</text>
+      <text x="64" y="48" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Income • Bank Account</text>
+      <text x="328" y="38" text-anchor="end" fill="#34D399" font-family="system-ui, sans-serif" font-size="14" font-weight="700">+ ₹ 38,000</text>
+    </g>
+  </g>
+
+  <!-- Bottom Navigation Mock -->
+  <g transform="translate(36, 734)">
+    <rect width="348" height="54" rx="27" fill="#121A16" stroke="#1F3329" stroke-width="1"/>
+    <circle cx="60" cy="27" r="16" fill="#10B981" fill-opacity="0.2"/>
+    <circle cx="60" cy="27" r="5" fill="#10B981"/>
+    <circle cx="137" cy="27" r="4" fill="#6B7280"/>
+    <circle cx="214" cy="27" r="4" fill="#6B7280"/>
+    <circle cx="290" cy="27" r="4" fill="#6B7280"/>
+  </g>
+
+  <!-- Home Indicator Bar -->
+  <rect x="150" y="806" width="120" height="4" rx="2" fill="#4B5563"/>
+</svg>

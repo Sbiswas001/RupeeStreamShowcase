@@ -1,0 +1,39 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary & Build Scratch Files
+node_modules/
+dist/
+build/
+*.tmp
+*.log
+
+# Firebase CLI Artifacts & Logs
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Sensitive Files & Keys (Never commit credentials)
+*.jks
+*.keystore
+*.key
+*.pem
+*.p12
+.env
+.env.*
+!.env.example
+credentials.json
+google-services.json
+*service-account*.json
+*serviceAccount*.json
+*firebase-adminsdk*.json

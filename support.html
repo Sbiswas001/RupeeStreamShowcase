@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RupeeStream Support — Help, Guides &amp; Troubleshooting</title>
+  <meta name="description" content="Official RupeeStream Support. Guides on Google Drive backup, data restore, Google Sign-In, RupeeStream+ purchases, App Lock, and troubleshooting.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RupeeStream Support &amp; FAQ">
+  <meta property="og:description" content="Need help with RupeeStream? Find answers on Google Drive backups, App Lock, RupeeStream+ restore, and contact developer Sayan Biswas.">
+  <meta property="og:image" content="assets/branding/logo.svg">
+  <meta name="theme-color" content="#10B981">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/branding/favicon.svg">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="RupeeStream Home">
+        <img src="assets/branding/logo.svg" alt="RupeeStream Logo" class="brand-logo" width="36" height="36">
+        <span class="brand-name">RupeeStream</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#features" class="nav-link">Features</a></li>
+          <li><a href="privacy-policy.html" class="nav-link">Privacy</a></li>
+          <li><a href="support.html" class="nav-link active">Support</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-page">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill">Help &amp; Knowledge Base</span>
+        <h1 class="page-title">RupeeStream Support</h1>
+        <p class="section-subtitle">
+          Find straightforward answers to common questions about backup, recovery, and security. Need personalized help? Contact us directly.
+        </p>
+      </div>
+
+      <!-- Support Grid -->
+      <div class="support-grid">
+        <!-- 1. Google Drive Backup -->
+        <div class="support-card">
+          <div class="support-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0;">
+              <img src="assets/icons/backup.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="support-card-title">Google Drive Backup</h3>
+          </div>
+          <p>
+            RupeeStream allows you to create optional encrypted backups directly to your Google Drive account.
+          </p>
+          <p>
+            <strong>How it works:</strong> Your database is encrypted on your device using AES-256-GCM before upload. The file is stored strictly in your private Google Drive <code>appDataFolder</code>.
+          </p>
+          <p>
+            RupeeStream cannot access, modify, or read your normal personal files or documents in Google Drive.
+          </p>
+        </div>
+
+        <!-- 2. Restore -->
+        <div class="support-card">
+          <div class="support-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0;">
+              <img src="assets/icons/recurring.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="support-card-title">Restoring Your Data</h3>
+          </div>
+          <p>
+            To restore your financial records on a new or reset Android device:
+          </p>
+          <ol style="padding-left: 20px; color: var(--text-secondary); margin-bottom: 12px; font-size: 0.95rem;">
+            <li style="margin-bottom: 6px;">Sign in with the same Google Account used during the backup.</li>
+            <li style="margin-bottom: 6px;">Navigate to <em>Settings &gt; Backup &amp; Restore</em> in RupeeStream.</li>
+            <li style="margin-bottom: 6px;">Select <em>Restore from Google Drive</em>.</li>
+          </ol>
+          <p>
+            The encrypted backup is downloaded and decrypted locally on your device using your encryption credentials.
+          </p>
+        </div>
+
+        <!-- 3. Google Sign-In -->
+        <div class="support-card">
+          <div class="support-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0;">
+              <img src="assets/icons/accounts.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="support-card-title">Google Sign-In</h3>
+          </div>
+          <p>
+            Google Sign-In is strictly utilized to authenticate access to your Google Drive <code>appDataFolder</code> and to support encrypted backup-key recovery via Google Play Blockstore.
+          </p>
+          <p>
+            RupeeStream does not use Google Sign-In to create a remote RupeeStream account or profile, and no account details are transmitted to any RupeeStream server.
+          </p>
+        </div>
+
+        <!-- 4. RupeeStream+ -->
+        <div class="support-card">
+          <div class="support-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0;">
+              <img src="assets/icons/premium.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="support-card-title">RupeeStream+ (₹99)</h3>
+          </div>
+          <p>
+            RupeeStream+ is a one-time lifetime purchase priced at ₹99 that unlocks extended personalization features and theme customization.
+          </p>
+          <p>
+            <strong>Restoring your purchase:</strong> Purchases are handled entirely by Google Play. If you reinstall or switch devices, your entitlement is automatically recognized when signed into the same Google Play account.
+          </p>
+        </div>
+
+        <!-- 5. App Lock & Biometrics -->
+        <div class="support-card">
+          <div class="support-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0;">
+              <img src="assets/icons/security.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="support-card-title">App Lock &amp; Biometrics</h3>
+          </div>
+          <p>
+            RupeeStream leverages the Android Keystore and Android's native <code>BiometricPrompt</code> API to secure access via your fingerprint, face unlock, or app PIN.
+          </p>
+          <p>
+            Biometric credentials never leave your device's hardware security module and are never accessible to RupeeStream.
+          </p>
+        </div>
+
+        <!-- 6. General Troubleshooting -->
+        <div class="support-card">
+          <div class="support-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0;">
+              <img src="assets/icons/insights.svg" alt="" width="24" height="24">
+            </div>
+            <h3 class="support-card-title">General Troubleshooting</h3>
+          </div>
+          <p>
+            <strong>Missing Backup:</strong> Verify that you have an active internet connection and that you are signed into the correct Google account in Android settings.
+          </p>
+          <p>
+            <strong>Notifications Not Showing:</strong> Ensure that system notification permissions are granted in Android Settings for RupeeStream to receive local bill and budget reminders.
+          </p>
+          <p>
+            <strong>Data Clearance:</strong> Clearing app data in Android system settings will delete your local records. Ensure your Google Drive backup is up to date before clearing storage.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Developer Card -->
+      <div class="contact-card">
+        <span class="badge-pill" style="margin-bottom: 12px;">Direct Assistance</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">Still need help?</h2>
+        <p style="color: var(--text-secondary); max-width: 540px; margin-inline: auto; margin-bottom: 24px;">
+          Have a question, feedback, or need troubleshooting assistance? Reach out directly to the developer.
+        </p>
+        <a href="mailto:sbiswas001.tech@gmail.com" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email: sbiswas001.tech@gmail.com
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-title">
+            <img src="assets/branding/logo.svg" alt="" width="28" height="28">
+            RupeeStream
+          </div>
+          <p class="footer-brand-desc">
+            A privacy-focused, local-first personal finance manager for Android developed by Sayan Biswas.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h5>Navigation</h5>
+            <ul class="footer-nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <h5>Trust &amp; Legal</h5>
+            <ul class="footer-nav-links">
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="support.html">Support &amp; FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-col">
+            <h5>Contact</h5>
+            <ul class="footer-nav-links">
+              <li><a href="mailto:sbiswas001.tech@gmail.com">sbiswas001.tech@gmail.com</a></li>
+              <li><span>Package: sayan.apps.rupeestream</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sayan Biswas · All rights reserved.</p>
+        <p>Built for privacy. No ads. No tracking.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

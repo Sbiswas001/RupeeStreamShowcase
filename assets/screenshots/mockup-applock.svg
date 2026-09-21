@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15231C"/>
+      <stop offset="100%" stop-color="#0E1612"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="560" height="380" rx="24" fill="url(#shieldBg2)" stroke="#1F3329" stroke-width="2"/>
+
+  <!-- Left Side: Phone with Biometric Prompt -->
+  <g transform="translate(48, 30)">
+    <!-- Phone outline -->
+    <rect width="200" height="320" rx="24" fill="#0C1310" stroke="#253D30" stroke-width="2"/>
+    <rect x="70" y="12" width="60" height="10" rx="5" fill="#18241F"/>
+    
+    <!-- Lock screen dial -->
+    <circle cx="100" cy="110" r="40" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-width="2"/>
+    <path d="M92 108 v-8 a8 8 0 0 1 16 0 v8 M86 108 h28 v20 h-28 z" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"/>
+
+    <text x="100" y="180" text-anchor="middle" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="700">RupeeStream Locked</text>
+    <text x="100" y="200" text-anchor="middle" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Confirm your fingerprint</text>
+
+    <!-- Biometric fingerprint icon -->
+    <circle cx="100" cy="246" r="24" fill="#10B981" fill-opacity="0.2" filter="url(#glowGreen)"/>
+    <path d="M92 246 c0-5 3.5-8 8-8 s8 3 8 8 c0 6-3 9-8 12 M96 246 c0-2 1.5-4 4-4 s4 2 4 4 c0 4-2 6-4 8" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right Side: Hardware & Keystore Security Info -->
+  <g transform="translate(280, 50)">
+    <rect width="230" height="76" rx="14" fill="#14211A" stroke="#233B2E" stroke-width="1.5"/>
+    <text x="20" y="32" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Android Keystore</text>
+    <text x="20" y="54" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Hardware-backed cryptographic protection</text>
+
+    <rect y="96" width="230" height="76" rx="14" fill="#14211A" stroke="#233B2E" stroke-width="1.5"/>
+    <text x="20" y="128" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">BiometricPrompt API</text>
+    <text x="20" y="150" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Biometric templates never leave OS</text>
+
+    <rect y="192" width="230" height="76" rx="14" fill="#14211A" stroke="#233B2E" stroke-width="1.5"/>
+    <text x="20" y="224" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Privacy Shield Mode</text>
+    <text x="20" y="246" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Shoulder-surfing balance masking</text>
+  </g>
+</svg>
