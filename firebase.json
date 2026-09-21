@@ -4,10 +4,12 @@
     "ignore": [
       "firebase.json",
       ".firebaserc",
+      ".git/**",
+      ".firebase/**",
+      ".github/**",
       "**/.*",
       "**/node_modules/**",
-      "README.md",
-      ".github/**"
+      "README.md"
     ],
     "cleanUrls": true,
     "trailingSlash": false,
