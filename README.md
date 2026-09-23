@@ -141,4 +141,4 @@ While Firebase Hosting is the canonical production host, all internal links and 
 
 - Application Name: **RupeeStream**
 - Developer: **Sayan Biswas**
-- Copyright © 2026 Sayan Biswas. All rights reserved.
+- Copyright © 2025 Sayan Biswas. All rights reserved.

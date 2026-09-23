@@ -82,6 +82,16 @@
         mobileToggle.focus();
       }
     });
+
+    // Close when clicking any nav link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   }
 
   // Highlight active page link based on location
@@ -92,4 +102,119 @@
       link.classList.add('active');
     }
   });
+
+  // --- Dynamic Copyright Year ---
+  // Ensure trust date displays 2025 as requested
+  const sysYear = new Date().getFullYear();
+  const currentYear = sysYear > 2025 ? 2025 : sysYear;
+  document.querySelectorAll('.copyright-year, #current-year').forEach(el => {
+    el.textContent = currentYear;
+  });
+
+  // --- Copy Email to Clipboard with Toast Notification ---
+  const copyButtons = document.querySelectorAll('.copy-email-btn');
+  const toast = document.getElementById('toast-notification');
+  let toastTimer = null;
+
+  function showToast(message) {
+    if (!toast) return;
+    const toastMsg = toast.querySelector('.toast-message') || toast;
+    toastMsg.textContent = message;
+    toast.classList.add('active');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('active');
+    }, 3200);
+  }
+
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const email = btn.getAttribute('data-email') || 'sbiswas001.tech@gmail.com';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast(`Copied to clipboard: ${email}`);
+        }).catch(() => {
+          showToast(`Email: ${email}`);
+        });
+      } else {
+        // Fallback for older browsers
+        const tempInput = document.createElement('input');
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast(`Copied to clipboard: ${email}`);
+      }
+    });
+  });
+
+  // --- Showcase Filter Tabs & Lightbox Modal ---
+  const tabButtons = document.querySelectorAll('.showcase-tab-btn');
+  const showcaseCards = document.querySelectorAll('.showcase-card');
+  const modal = document.getElementById('screenshot-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalCaption = document.getElementById('modal-caption');
+  const modalClose = document.getElementById('modal-close');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      showcaseCards.forEach(card => {
+        const category = card.getAttribute('data-category') || 'all';
+        if (filter === 'all' || category.includes(filter)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Open modal on click
+  document.querySelectorAll('.device-frame, .showcase-img-container').forEach(el => {
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', () => {
+      if (!modal || !modalImg) return;
+      const img = el.querySelector('img');
+      if (!img) return;
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      if (modalCaption) {
+        modalCaption.textContent = img.getAttribute('data-caption') || img.alt || 'RupeeStream Android App Screen';
+      }
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
 })();
+
+

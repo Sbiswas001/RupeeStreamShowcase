@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="gplay-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4b5563"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="play-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C1A6"/>
+      <stop offset="100%" stop-color="#008FFB"/>
+    </linearGradient>
+    <linearGradient id="play-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00EA76"/>
+      <stop offset="100%" stop-color="#00B050"/>
+    </linearGradient>
+    <linearGradient id="play-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3A44"/>
+      <stop offset="100%" stop-color="#E50914"/>
+    </linearGradient>
+    <linearGradient id="play-yellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC200"/>
+      <stop offset="100%" stop-color="#FFA800"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Badge Background Container -->
+  <rect x="1" y="1" width="198" height="58" rx="12" fill="#0c120f" stroke="url(#gplay-border)" stroke-width="1.5"/>
+
+  <!-- Google Play Color Triangle Icon -->
+  <g transform="translate(16, 12)">
+    <!-- Base full triangle clip / parts -->
+    <!-- Red bottom triangle -->
+    <path d="M 1.2 1.5 L 19.5 19.8 L 14.8 24.5 L 1.2 34.5 C 0.5 33.8 0 32.8 0 31.5 L 0 4.5 C 0 3.2 0.5 2.2 1.2 1.5 Z" fill="url(#play-blue)" />
+    <!-- Yellow right triangle -->
+    <path d="M 24.5 14.8 L 19.5 19.8 L 24.5 24.8 L 28.2 22.7 C 29.3 22.1 29.3 21.1 28.2 20.5 L 24.5 14.8 Z" fill="url(#play-yellow)" />
+    <!-- Top green triangle -->
+    <path d="M 1.2 1.5 L 19.5 19.8 L 24.5 14.8 L 5.4 3.8 C 3.9 3.0 2.2 2.1 1.2 1.5 Z" fill="url(#play-green)" />
+    <!-- Bottom red triangle -->
+    <path d="M 1.2 34.5 L 19.5 19.8 L 24.5 24.8 L 5.4 35.8 C 3.9 36.6 2.2 35.7 1.2 34.5 Z" fill="url(#play-red)" />
+  </g>
+
+  <!-- Badge Typography -->
+  <!-- "GET IT ON" Subtext -->
+  <text x="64" y="24" fill="#d1d5db" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" letter-spacing="0.12em">GET IT ON</text>
+  
+  <!-- "Google Play" Main Brand -->
+  <text x="64" y="44" fill="#ffffff" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" letter-spacing="-0.02em">Google Play</text>
+</svg>

@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RupeeStream Support — Help, Guides &amp; Troubleshooting</title>
-  <meta name="description" content="Official RupeeStream Support. Guides on Google Drive backup, data restore, Google Sign-In, RupeeStream+ purchases, App Lock, and troubleshooting.">
+  <meta name="description" content="Official RupeeStream Support. Guides on data deletion requests, Google Drive backup, restore, Google Sign-In, RupeeStream+ purchases, and troubleshooting.">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="RupeeStream Support &amp; FAQ">
   <meta property="og:description" content="Need help with RupeeStream? Find answers on Google Drive backups, App Lock, RupeeStream+ restore, and contact developer Sayan Biswas.">
-  <meta property="og:image" content="assets/branding/logo.svg">
+  <meta property="og:image" content="assets/branding/feature-graphic.png">
   <meta name="theme-color" content="#10B981">
 
   <!-- Favicon & Touch Icons -->
@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260923">
 </head>
 <body>
 
@@ -67,6 +67,61 @@
           Find straightforward answers to common questions about backup, recovery, and security. Need personalized help? Contact us directly.
         </p>
       </div>
+
+      <!-- Data Deletion & Privacy Requests Section -->
+      <section id="data-deletion" class="deletion-section" aria-labelledby="deletion-title">
+        <div class="deletion-card">
+          <div class="deletion-card-header">
+            <div class="feature-icon-wrapper" style="margin-bottom:0; background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+            </div>
+            <div>
+              <span class="badge-pill" style="margin-bottom: 6px; background-color: rgba(239, 68, 68, 0.1); color: #ef4444; border-color: rgba(239, 68, 68, 0.25);">Privacy &amp; Data Safety</span>
+              <h2 id="deletion-title" class="deletion-title">Data Deletion &amp; Privacy Requests</h2>
+            </div>
+          </div>
+          
+          <div class="deletion-content-grid">
+            <div class="deletion-main-text">
+              <p>
+                You can delete your financial data directly from RupeeStream. Local financial records can be removed using the app's deletion controls, or by clearing the app's storage / uninstalling the app.
+              </p>
+              <p>
+                <strong>Google Drive backups:</strong> Google Drive backups are separate from local app data. If you enabled Google Drive backup, delete the RupeeStream backup using the backup deletion controls in the app.
+              </p>
+              <div class="callout-box" style="margin-top: 14px; margin-bottom: 14px; border-left-color: var(--primary);">
+                <p>
+                  <strong>Serverless Guarantee:</strong> RupeeStream does not maintain a server-side database containing your financial records.
+                </p>
+              </div>
+            </div>
+
+            <div class="deletion-affected-box">
+              <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary);">What is affected when data is deleted:</h4>
+              <ul class="deletion-list">
+                <li>Local transactions and financial records</li>
+                <li>Local account, budget, and goal data</li>
+                <li>Local preferences and application data</li>
+                <li>Google Drive backup, if separately deleted</li>
+                <li>Google account email stored by RupeeStream</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="deletion-action-banner">
+            <div class="deletion-action-info">
+              <p style="margin: 0; font-weight: 600; color: var(--text-primary);">Need help deleting data or have a privacy-related request?</p>
+              <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">
+                Contact developer at <a href="mailto:sbiswas001.tech@gmail.com?subject=RupeeStream%20Data%20Deletion%20Request"><strong>sbiswas001.tech@gmail.com</strong></a> with <em>"RupeeStream Data Deletion Request"</em> in the subject line.
+              </p>
+            </div>
+            <a href="mailto:sbiswas001.tech@gmail.com?subject=RupeeStream%20Data%20Deletion%20Request" class="btn btn-primary deletion-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Request Data Deletion
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- Support Grid -->
       <div class="support-grid">
@@ -132,10 +187,10 @@
             <div class="feature-icon-wrapper" style="margin-bottom:0;">
               <img src="assets/icons/premium.svg" alt="" width="24" height="24">
             </div>
-            <h3 class="support-card-title">RupeeStream+ (₹99)</h3>
+            <h3 class="support-card-title">RupeeStream+</h3>
           </div>
           <p>
-            RupeeStream+ is a one-time lifetime purchase priced at ₹99 that unlocks extended personalization features and theme customization.
+            RupeeStream+ is a one-time purchase that unlocks additional personalization and customization features. Current pricing is shown in Google Play.
           </p>
           <p>
             <strong>Restoring your purchase:</strong> Purchases are handled entirely by Google Play. If you reinstall or switch devices, your entitlement is automatically recognized when signed into the same Google Play account.
@@ -154,7 +209,7 @@
             RupeeStream leverages the Android Keystore and Android's native <code>BiometricPrompt</code> API to secure access via your fingerprint, face unlock, or app PIN.
           </p>
           <p>
-            Biometric credentials never leave your device's hardware security module and are never accessible to RupeeStream.
+            Biometric information is handled by Android's biometric security system and is not accessible to RupeeStream.
           </p>
         </div>
 
@@ -237,7 +292,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Sayan Biswas · All rights reserved.</p>
+        <p>© <span class="copyright-year">2025</span> Sayan Biswas · All rights reserved.</p>
         <p>Built for privacy. No ads. No tracking.</p>
       </div>
     </div>

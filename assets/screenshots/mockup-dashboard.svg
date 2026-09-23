@@ -1,126 +1,222 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 840" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 880" width="100%" height="100%">
   <defs>
-    <linearGradient id="phoneBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0F1713"/>
-      <stop offset="100%" stop-color="#070A09"/>
+    <!-- Background Gradient for Phone Chassis -->
+    <linearGradient id="phoneChassis" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2924"/>
+      <stop offset="50%" stop-color="#121815"/>
+      <stop offset="100%" stop-color="#0a0f0d"/>
     </linearGradient>
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#18231E"/>
-      <stop offset="100%" stop-color="#121A16"/>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141c22"/>
+      <stop offset="100%" stop-color="#0e141a"/>
     </linearGradient>
-    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10B981"/>
-      <stop offset="100%" stop-color="#34D399"/>
-    </linearGradient>
+
+    <!-- Emerald Glow Filter -->
+    <filter id="emeraldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
     <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
-  <!-- Outer Phone Body / Bezel -->
-  <rect x="10" y="10" width="400" height="820" rx="44" fill="url(#phoneBg)" stroke="#23322B" stroke-width="6"/>
+  <!-- Phone Outer Bezel -->
+  <rect x="6" y="6" width="408" height="868" rx="46" fill="url(#phoneChassis)" stroke="#2b3b32" stroke-width="4"/>
   
-  <!-- Camera Pill / Dynamic Island -->
-  <rect x="160" y="24" width="100" height="20" rx="10" fill="#000000"/>
-  <circle cx="236" cy="34" r="5" fill="#151E19"/>
+  <!-- Screen Inner Display -->
+  <rect x="16" y="16" width="388" height="848" rx="38" fill="#0b0e13"/>
+
+  <!-- Punch-hole Camera -->
+  <circle cx="210" cy="34" r="6" fill="#000000"/>
+  <circle cx="211" cy="33" r="2" fill="#17251e"/>
 
   <!-- Status Bar -->
-  <text x="44" y="38" fill="#9CA3AF" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">09:41</text>
-  <path d="M360 30h16v8h-16z M378 33v2" stroke="#9CA3AF" fill="none" stroke-width="1.5"/>
+  <text x="36" y="38" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">4:44</text>
+  <text x="74" y="38" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">0 KB/s</text>
+  <!-- WiFi / Signal / Battery Icons (SVG paths) -->
+  <path d="M340 32a6 6 0 0 1 8 0 M336 29a12 12 0 0 1 16 0" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="366" y="28" width="18" height="10" rx="3" fill="none" stroke="#9ca3af" stroke-width="1.2"/>
+  <rect x="368" y="30" width="9" height="6" rx="1.5" fill="#10b981"/>
+  <path d="M385 31v4" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
 
-  <!-- App Bar -->
-  <g transform="translate(36, 68)">
-    <g transform="translate(0, -2) scale(0.72) translate(-28, -28)">
-      <path d="M32.2365 35.4551C32.5705 34.0745 33.561 32.7524 34.8717 31.9869C35.7194 31.4936 36.6803 31.1831 37.6806 31.0792C38.7075 30.9679 40.3769 31.0088 41.459 31.0094L47.8017 31.0107L61.6966 31.0074C63.512 31.0139 65.3973 30.9799 67.1996 31.0197C66.8625 31.4368 66.4827 32.0299 66.2064 32.4716C65.2563 33.9906 63.7153 35.7519 61.6176 35.904C58.987 36.0948 56.16 35.9248 53.498 35.9723C54.6395 37.3457 54.8528 37.8214 55.3982 39.4952C58.5451 39.4731 61.692 39.4703 64.8391 39.487C64.0402 41.3937 63.0084 42.6186 60.9154 43.5513C59.0712 44.373 57.2478 43.8848 55.4238 44.081C55.2643 44.659 55.0895 45.3699 54.8378 45.9135C53.8995 47.9404 51.882 49.6756 49.8334 50.7887C47.7396 51.9263 45.1853 52.571 42.762 52.7736C42.3807 52.8055 40.9927 52.7759 40.7911 52.8557C40.7494 53.024 41.5264 53.7432 41.6856 53.9172L44.159 56.6141C45.986 58.6453 47.8322 60.6622 49.6974 62.6646C52.0918 65.1935 54.2501 67.4462 57.3735 69.245C58.6584 69.9832 60.0371 70.5772 61.4795 71.0141C61.7691 71.1021 62.9422 71.3705 63.0796 71.4274C62.0695 71.5482 60.5099 71.4576 59.5081 71.3705C54.8845 70.9664 50.8052 69.4885 47.1137 66.9193C45.8534 66.0402 44.657 65.088 43.532 64.0687C41.3978 62.1019 39.3009 59.7008 37.3583 57.5471C36.6627 56.7806 35.9746 56.0087 35.2941 55.2312C34.216 53.9986 33.1774 53.035 33.5801 51.2978C34.1219 48.9602 37.757 49.4844 39.7519 49.3626C42.4567 49.1974 45.1425 48.3333 46.8688 46.3672C47.4545 45.6954 47.872 44.9158 48.0924 44.0826C46.9462 44.0372 45.7512 44.0341 44.6025 44.0509C40.3274 44.1136 36.044 44.0091 31.7705 44.0462C32.2354 41.7739 33.5501 39.915 36.2613 39.5165C37.4997 39.3346 38.9677 39.4206 40.2397 39.4194L47.3433 39.4033C46.4804 37.5243 45.0636 36.4353 42.8316 36.07C42.7911 36.0779 42.6824 36.1045 42.6428 36.1048C39.8935 36.1175 37.1232 36.1052 34.3668 36.1049C33.6509 36.1048 32.8789 35.9895 32.1213 35.9768C32.152 35.7626 32.1726 35.6625 32.2365 35.4551Z" fill="#10B981"/>
-      <path d="M33.9819 54.9372C33.4291 53.8239 32.2163 54.056 31.7705 54.9372C30.3462 57.7527 31.1419 61.5556 32.1851 64.5737C34.2987 70.6886 41.7562 74.2757 48.0364 75.104C55.1243 76.0392 68.1773 77.13 74.3414 73.3077C75.0909 72.6764 74.8943 71.0809 74.8943 71.0809C74.4258 71.1711 72.6761 71.4986 72.1023 71.6555C69.0947 72.4017 66.0043 72.7949 62.8986 72.8265C60.4482 72.8797 57.9975 72.7322 55.5731 72.3855C46.294 71.012 34.5348 65.5141 33.9819 54.9372Z" fill="#10B981"/>
-      <path d="M57.9613 60.7016C57.997 60.697 58.0328 60.6935 58.0688 60.6913C58.5143 60.6655 58.6537 60.9329 58.6656 61.3231C58.7217 63.1691 58.6702 65.0211 58.689 66.8687C58.6954 67.4979 58.7066 68.1592 58.678 68.7867L58.659 68.78C57.7638 68.4504 56.5293 67.3929 55.8336 66.7333C55.0086 65.9454 53.7963 64.7218 53.2596 63.7898C52.4184 62.3289 54.0615 61.8293 55.0969 61.5798C56.0224 61.3569 57.0488 60.8108 57.9613 60.7016Z" fill="#10B981"/>
-      <path d="M66.4668 56.6498C66.4907 56.648 66.515 56.6462 66.5393 56.6444C67.3991 56.5471 67.1738 58.5769 67.1709 59.2525L67.1672 62.0423L67.1705 71.4858C65.7116 71.4831 64.2593 71.2692 62.8512 70.8493C62.4556 70.7277 61.9576 70.5204 61.5667 70.3663C61.4857 68.7417 61.5702 67.128 61.5524 65.2824C61.6354 63.3899 61.376 60.9575 61.696 59.1564C61.757 58.8126 66.0408 56.7414 66.4668 56.6498Z" fill="#10B981"/>
-      <path d="M68.6416 67.5692C68.6416 68.6476 68.7166 70.4867 68.6168 71.4858C69.1377 71.389 73.0832 70.7062 74.6373 69.2799C75.8736 68.1454 75.6929 65.8277 75.6939 64.3704L75.695 60.4205L75.7013 55.8547C75.7019 55.026 75.7066 54.1931 75.6781 53.3708C75.6443 52.3982 74.697 52.4701 73.9014 52.8683C72.9008 53.3693 71.9731 53.9811 70.9725 54.4872C70.4563 54.7484 69.9412 55.0063 69.4314 55.2745C68.7483 55.6426 68.6622 56.1165 68.6617 56.7354C68.6501 57.7626 68.6506 58.7879 68.649 59.8143L68.6416 67.5692Z" fill="#10B981"/>
-      <path d="M71.2084 42.3872C70.2392 42.8001 69.1297 43.2727 68.1889 43.7196C68.8708 44.1442 69.6518 44.7286 70.3524 45.1069C69.3467 46.6658 67.8795 48.187 66.537 49.504C62.8187 53.1516 60.5197 54.3805 54.991 56.6073C49.6317 58.7658 54.991 56.6073 49.4623 58.2773C49.4623 58.2773 48.9094 59.9473 50.568 59.9473C57.6165 58.8915 64.4911 55.3866 69.8065 51.0352C71.0801 49.9923 72.2379 48.6583 73.2791 47.4201C73.8772 47.9564 74.8399 48.6162 75.3455 49.132C75.6442 46.3306 75.8213 43.2372 76 40.4149C74.4308 41.003 72.791 41.7127 71.2489 42.3699L71.2084 42.3872Z" fill="#10B981"/>
-    </g>
-    <text x="44" y="24" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="-0.5">RupeeStream</text>
+  <!-- App Header -->
+  <!-- Hamburger Menu Icon -->
+  <g transform="translate(36, 64)" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round">
+    <line x1="0" y1="2" x2="18" y2="2"/>
+    <line x1="0" y1="8" x2="18" y2="8"/>
+    <line x1="0" y1="14" x2="18" y2="14"/>
+  </g>
+  <!-- App Title -->
+  <text x="70" y="78" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="20" font-weight="800" letter-spacing="-0.4">RupeeStream</text>
+  <!-- Star & Search Icons -->
+  <g transform="translate(316, 66)">
+    <!-- Star Icon (Teal) -->
+    <path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 8.9 9.1 8z" fill="#00d09c"/>
+    <!-- Search Icon -->
+    <path d="M42 9a6 6 0 1 1-12 0 6 6 0 0 1 12 0zm-1.8 4.2L45 18" fill="none" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tagline Row: See Beyond the Balance -->
+  <text x="36" y="112" fill="#7d8b96" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="600">See Beyond the Balance</text>
+  <!-- Sliders / Filter Icon -->
+  <g transform="translate(366, 102)" stroke="#7d8b96" stroke-width="1.6" stroke-linecap="round">
+    <line x1="0" y1="2" x2="14" y2="2"/><circle cx="4" cy="2" r="1.5" fill="#7d8b96"/>
+    <line x1="0" y1="7" x2="14" y2="7"/><circle cx="10" cy="7" r="1.5" fill="#7d8b96"/>
+    <line x1="0" y1="12" x2="14" y2="12"/><circle cx="6" cy="12" r="1.5" fill="#7d8b96"/>
+  </g>
+
+  <!-- CARD 1: Net Worth Card -->
+  <g transform="translate(32, 126)" filter="url(#cardShadow)">
+    <rect width="356" height="136" rx="20" fill="url(#cardBg)" stroke="#1a252f" stroke-width="1"/>
     
-    <!-- Lock Badge Indicator -->
-    <rect x="296" y="4" width="52" height="26" rx="13" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.3"/>
-    <text x="322" y="21" text-anchor="middle" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">LOCAL</text>
+    <text x="20" y="28" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="500">Net worth · September</text>
+    <text x="20" y="62" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">₹6,76,453.00</text>
+    
+    <!-- Neon Emerald Sparkline -->
+    <path d="M 20 98 Q 50 98 75 97 Q 85 96 90 74 Q 96 70 102 75 Q 120 78 180 80 Q 230 83 250 78 Q 280 78 336 82" fill="none" stroke="#00d09c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#emeraldGlow)"/>
+
+    <!-- Pill: -6.0% this month -->
+    <rect x="20" y="108" width="186" height="22" rx="11" fill="#0c2321"/>
+    <path d="M28 119l4 4 6-6" fill="none" stroke="#00d09c" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="44" y="123" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700">₹43,211.00 (-6.0%) this month</text>
   </g>
 
-  <!-- Hero Card: Safe-to-Spend -->
-  <g transform="translate(36, 126)" filter="url(#cardShadow)">
-    <rect width="348" height="156" rx="24" fill="url(#cardGrad)" stroke="#1F3329" stroke-width="1.5"/>
-    <text x="24" y="36" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="13" font-weight="500">SAFE-TO-SPEND TODAY</text>
+  <!-- CARD 2: Safe to Spend Today Card -->
+  <g transform="translate(32, 276)" filter="url(#cardShadow)">
+    <rect width="356" height="158" rx="20" fill="url(#cardBg)" stroke="#1a252f" stroke-width="1"/>
     
-    <text x="24" y="80" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="34" font-weight="800" letter-spacing="-1">₹ 14,850</text>
-    
-    <!-- Progress Bar -->
-    <rect x="24" y="104" width="300" height="8" rx="4" fill="#192821"/>
-    <rect x="24" y="104" width="220" height="8" rx="4" fill="url(#emeraldGrad)"/>
-    
-    <text x="24" y="132" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="600">₹22,400 monthly budget</text>
-    <text x="324" y="132" text-anchor="end" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">66% left</text>
+    <!-- Header: Shield + SAFE TO SPEND TODAY + Info (?) -->
+    <path d="M 20 22 l 5 -3 l 5 3 v 5 c 0 4 -3 7 -5 8 c -2 -1 -5 -4 -5 -8 z" fill="#00d09c"/>
+    <text x="38" y="27" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="0.5">SAFE TO SPEND TODAY</text>
+    <circle cx="334" cy="23" r="7" fill="none" stroke="#687884" stroke-width="1.4"/>
+    <text x="334" y="27" text-anchor="middle" fill="#687884" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="700">?</text>
+
+    <!-- Main Safe Amount -->
+    <text x="20" y="68" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.5">₹22,223.98</text>
+
+    <!-- Right Stat: vs 7-day avg with mini sparkline -->
+    <text x="338" y="48" text-anchor="end" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="600">↑ ₹6,013.56 vs 7-day avg</text>
+    <!-- Dotted trend line with glowing end dot -->
+    <path d="M250 68 Q270 65 290 64 T328 58" fill="none" stroke="#00d09c" stroke-width="2" stroke-dasharray="3,3"/>
+    <circle cx="328" cy="58" r="3.5" fill="#ffffff" stroke="#00d09c" stroke-width="2"/>
+
+    <!-- Discretionary Subtext -->
+    <text x="20" y="96" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13" font-weight="700">₹1,77,791.82 <tspan fill="#8d9ea9" font-weight="400">discretionary</tspan></text>
+    <text x="338" y="96" text-anchor="end" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700">· 8 days left</text>
+
+    <!-- Bottom Status Banner Pill -->
+    <rect x="14" y="112" width="328" height="32" rx="16" fill="#0d2b24"/>
+    <circle cx="34" cy="128" r="6" fill="#00d09c"/>
+    <path d="M31 128l2 2 4-4" fill="none" stroke="#0b0e13" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="46" y="132" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="700">On track to make your money last</text>
   </g>
 
-  <!-- Financial Health & Insights Split -->
-  <g transform="translate(36, 302)">
-    <!-- Card 1: Health Score -->
-    <rect x="0" y="0" width="166" height="110" rx="20" fill="url(#cardGrad)" stroke="#1F3329" stroke-width="1.5"/>
-    <text x="18" y="32" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Financial Health</text>
-    <text x="18" y="70" fill="#34D399" font-family="system-ui, sans-serif" font-size="28" font-weight="800">92<tspan font-size="16" fill="#9CA3AF" font-weight="500">/100</tspan></text>
-    <text x="18" y="94" fill="#10B981" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Excellent • On track</text>
+  <!-- SECTION: This Month -->
+  <text x="36" y="462" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="17" font-weight="800">This Month</text>
 
-    <!-- Card 2: Upcoming Bills -->
-    <rect x="182" y="0" width="166" height="110" rx="20" fill="url(#cardGrad)" stroke="#1F3329" stroke-width="1.5"/>
-    <text x="200" y="32" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Upcoming Bills</text>
-    <text x="200" y="70" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="28" font-weight="800">₹ 2,499</text>
-    <text x="200" y="94" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="11">Fiber Broadband (3d)</text>
+  <!-- CARD 3: Income & Spending Breakdown -->
+  <g transform="translate(32, 476)" filter="url(#cardShadow)">
+    <rect width="356" height="122" rx="20" fill="url(#cardBg)" stroke="#1a252f" stroke-width="1"/>
+    
+    <!-- Income Col -->
+    <circle cx="30" cy="24" r="8" fill="#0c2321"/>
+    <text x="30" y="27" text-anchor="middle" fill="#00d09c" font-size="11">↑</text>
+    <text x="44" y="28" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="600">Income</text>
+    <text x="20" y="56" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="20" font-weight="800">+₹ 1,40,000.00</text>
+
+    <!-- Spending Col -->
+    <circle cx="194" cy="24" r="8" fill="#2d1719"/>
+    <text x="194" y="27" text-anchor="middle" fill="#f87171" font-size="11">↓</text>
+    <text x="208" y="28" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="600">Spending</text>
+    <text x="184" y="56" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="20" font-weight="800">-₹ 58,211.00</text>
+
+    <!-- Net Cash Flow Row -->
+    <line x1="20" y1="74" x2="336" y2="74" stroke="#16202a" stroke-width="1"/>
+    <text x="20" y="100" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13" font-weight="600">Net Cash Flow</text>
+    <text x="336" y="100" text-anchor="end" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="16" font-weight="800">+₹ 81,789.00</text>
   </g>
 
-  <!-- Recent Transactions Section -->
-  <g transform="translate(36, 436)">
-    <text x="4" y="20" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Recent Activity</text>
-    <text x="344" y="20" text-anchor="end" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="600">View All</text>
-
-    <!-- Item 1 -->
-    <g transform="translate(0, 36)">
-      <rect width="348" height="66" rx="16" fill="url(#cardGrad)" stroke="#1A2822" stroke-width="1"/>
-      <circle cx="34" cy="33" r="18" fill="#10B981" fill-opacity="0.15"/>
-      <text x="34" y="38" text-anchor="middle" fill="#34D399" font-size="14">🛒</text>
-      <text x="64" y="28" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Organic Supermarket</text>
-      <text x="64" y="48" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Groceries • On-device auto-tag</text>
-      <text x="328" y="38" text-anchor="end" fill="#F87171" font-family="system-ui, sans-serif" font-size="14" font-weight="700">- ₹ 1,420</text>
+  <!-- TWO SPLIT CARDS: Last Activity & Next Upcoming -->
+  <g transform="translate(32, 614)">
+    <!-- Left Card: Last Activity -->
+    <g filter="url(#cardShadow)">
+      <rect width="172" height="88" rx="16" fill="url(#cardBg)" stroke="#1a252f" stroke-width="1"/>
+      <text x="14" y="22" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="0.5">LAST ACTIVITY</text>
+      <circle cx="154" cy="18" r="6" fill="none" stroke="#00d09c" stroke-width="1.2"/>
+      
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="700">Local Coffee &amp; Evenin...</text>
+      <text x="14" y="60" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">Food &amp; Dining</text>
+      <text x="14" y="78" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13" font-weight="800">-₹650.00</text>
     </g>
 
-    <!-- Item 2 -->
-    <g transform="translate(0, 114)">
-      <rect width="348" height="66" rx="16" fill="url(#cardGrad)" stroke="#1A2822" stroke-width="1"/>
-      <circle cx="34" cy="33" r="18" fill="#10B981" fill-opacity="0.15"/>
-      <text x="34" y="38" text-anchor="middle" fill="#34D399" font-size="14">⚡</text>
-      <text x="64" y="28" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="600">State Electricity Board</text>
-      <text x="64" y="48" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Utilities • Recurring bill</text>
-      <text x="328" y="38" text-anchor="end" fill="#F87171" font-family="system-ui, sans-serif" font-size="14" font-weight="700">- ₹ 890</text>
-    </g>
-
-    <!-- Item 3 -->
-    <g transform="translate(0, 192)">
-      <rect width="348" height="66" rx="16" fill="url(#cardGrad)" stroke="#1A2822" stroke-width="1"/>
-      <circle cx="34" cy="33" r="18" fill="#10B981" fill-opacity="0.15"/>
-      <text x="34" y="38" text-anchor="middle" fill="#34D399" font-size="14">💼</text>
-      <text x="64" y="28" fill="#F3F4F6" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Consulting Payout</text>
-      <text x="64" y="48" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Income • Bank Account</text>
-      <text x="328" y="38" text-anchor="end" fill="#34D399" font-family="system-ui, sans-serif" font-size="14" font-weight="700">+ ₹ 38,000</text>
+    <!-- Right Card: Next Upcoming -->
+    <g transform="translate(184, 0)" filter="url(#cardShadow)">
+      <rect width="172" height="88" rx="16" fill="url(#cardBg)" stroke="#1a252f" stroke-width="1"/>
+      <text x="14" y="22" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="0.5">NEXT UPCOMING</text>
+      <rect x="148" y="14" width="10" height="10" rx="2" fill="none" stroke="#00d09c" stroke-width="1.2"/>
+      <text x="14" y="52" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11">No upcoming bills</text>
     </g>
   </g>
 
-  <!-- Bottom Navigation Mock -->
-  <g transform="translate(36, 734)">
-    <rect width="348" height="54" rx="27" fill="#121A16" stroke="#1F3329" stroke-width="1"/>
-    <circle cx="60" cy="27" r="16" fill="#10B981" fill-opacity="0.2"/>
-    <circle cx="60" cy="27" r="5" fill="#10B981"/>
-    <circle cx="137" cy="27" r="4" fill="#6B7280"/>
-    <circle cx="214" cy="27" r="4" fill="#6B7280"/>
-    <circle cx="290" cy="27" r="4" fill="#6B7280"/>
+  <!-- Floating Action Button (FAB) -->
+  <g transform="translate(328, 672)" filter="url(#cardShadow)">
+    <circle cx="26" cy="26" r="26" fill="#00d09c"/>
+    <line x1="26" y1="16" x2="26" y2="36" stroke="#0b0e13" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="26" x2="36" y2="26" stroke="#0b0e13" stroke-width="3" stroke-linecap="round"/>
   </g>
 
-  <!-- Home Indicator Bar -->
-  <rect x="150" y="806" width="120" height="4" rx="2" fill="#4B5563"/>
+  <!-- Bottom Navigation Bar -->
+  <g transform="translate(24, 756)">
+    <rect width="372" height="64" rx="20" fill="#0b0f14"/>
+
+    <!-- Dashboard Pill (Active) -->
+    <rect x="12" y="10" width="56" height="32" rx="16" fill="#00d09c"/>
+    <!-- 4 Squares Grid Icon -->
+    <g transform="translate(34, 18)" fill="#0b0e13">
+      <rect x="-6" y="-1" width="5" height="5" rx="1"/>
+      <rect x="1" y="-1" width="5" height="5" rx="1"/>
+      <rect x="-6" y="6" width="5" height="5" rx="1"/>
+      <rect x="1" y="6" width="5" height="5" rx="1"/>
+    </g>
+    <text x="40" y="54" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="700">Dashboard</text>
+
+    <!-- Nav 2: Receipt / Transactions -->
+    <g transform="translate(132, 24)" stroke="#9ca3af" stroke-width="1.8" fill="none">
+      <rect x="0" y="0" width="14" height="18" rx="2"/>
+      <line x1="3" y1="5" x2="11" y2="5"/>
+      <line x1="3" y1="9" x2="11" y2="9"/>
+      <line x1="3" y1="13" x2="8" y2="13"/>
+    </g>
+
+    <!-- Nav 3: Insights Sparkline Chart -->
+    <g transform="translate(224, 24)" stroke="#9ca3af" stroke-width="1.8" stroke-linecap="round" fill="none">
+      <path d="M0 14l5-6 4 4 6-10"/>
+      <circle cx="15" cy="2" r="1.5" fill="#9ca3af"/>
+    </g>
+
+    <!-- Nav 4: Accounts Bank Icon -->
+    <g transform="translate(316, 24)" stroke="#9ca3af" stroke-width="1.8" stroke-linecap="round" fill="none">
+      <path d="M1 6l8-4 8 4"/>
+      <line x1="2" y1="7" x2="16" y2="7"/>
+      <line x1="4" y1="8" x2="4" y2="16"/>
+      <line x1="9" y1="8" x2="9" y2="16"/>
+      <line x1="14" y1="8" x2="14" y2="16"/>
+      <line x1="1" y1="16" x2="17" y2="16"/>
+    </g>
+  </g>
+
+  <!-- Android Navigation Bar (||| O <) -->
+  <g transform="translate(140, 836)" stroke="#6b7280" stroke-width="2" stroke-linecap="round" fill="none">
+    <!-- Recents ||| -->
+    <line x1="-50" y1="0" x2="-50" y2="14"/>
+    <line x1="-44" y1="0" x2="-44" y2="14"/>
+    <line x1="-38" y1="0" x2="-38" y2="14"/>
+    <!-- Home Circle -->
+    <circle cx="70" cy="7" r="6"/>
+    <!-- Back Arrow < -->
+    <path d="M185 2l-7 5 7 5"/>
+  </g>
 </svg>

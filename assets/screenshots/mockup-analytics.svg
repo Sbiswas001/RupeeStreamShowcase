@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 880" width="100%" height="100%">
+  <defs>
+    <!-- Phone Chassis Gradient -->
+    <linearGradient id="phoneChassisAna" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2924"/>
+      <stop offset="50%" stop-color="#121815"/>
+      <stop offset="100%" stop-color="#0a0f0d"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBgAna" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141c22"/>
+      <stop offset="100%" stop-color="#0e141a"/>
+    </linearGradient>
+
+    <!-- Emerald Glow -->
+    <filter id="emeraldGlowAna" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="cardShadowAna" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Phone Outer Bezel -->
+  <rect x="6" y="6" width="408" height="868" rx="46" fill="url(#phoneChassisAna)" stroke="#2b3b32" stroke-width="4"/>
+  
+  <!-- Screen Inner Display -->
+  <rect x="16" y="16" width="388" height="848" rx="38" fill="#0b0e13"/>
+
+  <!-- Punch-hole Camera -->
+  <circle cx="210" cy="34" r="6" fill="#000000"/>
+  <circle cx="211" cy="33" r="2" fill="#17251e"/>
+
+  <!-- Status Bar -->
+  <text x="36" y="38" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">4:44</text>
+  <text x="74" y="38" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">0 KB/s</text>
+  <!-- WiFi & Battery -->
+  <path d="M340 32a6 6 0 0 1 8 0 M336 29a12 12 0 0 1 16 0" fill="none" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="366" y="28" width="18" height="10" rx="3" fill="none" stroke="#9ca3af" stroke-width="1.2"/>
+  <rect x="368" y="30" width="12" height="6" rx="1.5" fill="#10b981"/>
+  <path d="M385 31v4" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- App Header -->
+  <g transform="translate(36, 64)" stroke="#f3f4f6" stroke-width="2" stroke-linecap="round">
+    <line x1="0" y1="2" x2="18" y2="2"/>
+    <line x1="0" y1="8" x2="18" y2="8"/>
+    <line x1="0" y1="14" x2="18" y2="14"/>
+  </g>
+  <text x="70" y="78" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="20" font-weight="800">Financial Insights</text>
+  <g transform="translate(356, 68)" stroke="#9ca3af" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="8" cy="8" r="7" fill="none"/>
+    <line x1="8" y1="5" x2="8" y2="9"/>
+    <circle cx="8" cy="12" r="0.8" fill="#9ca3af"/>
+  </g>
+
+  <!-- Tagline Subtitle -->
+  <text x="36" y="112" fill="#7d8b96" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12" font-weight="600">On-Device Intelligence · September</text>
+
+  <!-- CARD 1: Financial Health Assessment Score -->
+  <g transform="translate(32, 126)" filter="url(#cardShadowAna)">
+    <rect width="356" height="154" rx="20" fill="url(#cardBgAna)" stroke="#1a252f" stroke-width="1"/>
+    
+    <!-- Health Ring Dial -->
+    <g transform="translate(70, 76)">
+      <!-- Background track -->
+      <circle cx="0" cy="0" r="44" fill="none" stroke="#162520" stroke-width="9"/>
+      <!-- Active Arc (84% of circle) -->
+      <circle cx="0" cy="0" r="44" fill="none" stroke="#00d09c" stroke-width="9" stroke-dasharray="232 276" stroke-dashoffset="65" stroke-linecap="round" filter="url(#emeraldGlowAna)"/>
+      <text x="0" y="8" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="24" font-weight="800">84</text>
+      <text x="0" y="24" text-anchor="middle" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="9" font-weight="600">/ 100</text>
+    </g>
+
+    <!-- Score Details -->
+    <text x="140" y="44" fill="#00d09c" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="800" letter-spacing="0.5">HEALTH SCORE: STRONG</text>
+    <text x="140" y="68" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="15" font-weight="700">Excellent Discipline</text>
+    <text x="140" y="90" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" width="190">Savings rate: 58% of income</text>
+    <text x="140" y="108" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11">Zero high-interest debt logged</text>
+
+    <!-- Bottom Metric Chips -->
+    <rect x="140" y="120" width="88" height="20" rx="10" fill="#0c2321"/>
+    <text x="184" y="134" text-anchor="middle" fill="#00d09c" font-size="10" font-weight="700">On Track ✓</text>
+    
+    <rect x="236" y="120" width="94" height="20" rx="10" fill="#14212a"/>
+    <text x="283" y="134" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="700">Low Volatility</text>
+  </g>
+
+  <!-- CARD 2: Category Breakdown -->
+  <g transform="translate(32, 296)" filter="url(#cardShadowAna)">
+    <rect width="356" height="258" rx="20" fill="url(#cardBgAna)" stroke="#1a252f" stroke-width="1"/>
+    
+    <text x="20" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="16" font-weight="700">Top Spending Categories</text>
+    <text x="336" y="32" text-anchor="end" fill="#8d9ea9" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="12">₹58,211 total</text>
+
+    <!-- Category 1: Groceries & Supermarkets -->
+    <g transform="translate(20, 50)">
+      <circle cx="10" cy="10" r="10" fill="#0c2321"/>
+      <text x="10" y="14" text-anchor="middle" fill="#00d09c" font-size="10">🛒</text>
+      <text x="30" y="12" fill="#ffffff" font-size="13" font-weight="600">Groceries &amp; Food</text>
+      <text x="316" y="12" text-anchor="end" fill="#ffffff" font-size="13" font-weight="700">₹19,800 <tspan fill="#8d9ea9" font-size="11">(34%)</tspan></text>
+      <!-- Progress Bar -->
+      <rect x="30" y="20" width="286" height="6" rx="3" fill="#1b252f"/>
+      <rect x="30" y="20" width="97" height="6" rx="3" fill="#00d09c" filter="url(#emeraldGlowAna)"/>
+    </g>
+
+    <!-- Category 2: Housing & Utilities -->
+    <g transform="translate(20, 96)">
+      <circle cx="10" cy="10" r="10" fill="#1e1b2e"/>
+      <text x="10" y="14" text-anchor="middle" fill="#a855f7" font-size="10">⚡</text>
+      <text x="30" y="12" fill="#ffffff" font-size="13" font-weight="600">Bills &amp; Utilities</text>
+      <text x="316" y="12" text-anchor="end" fill="#ffffff" font-size="13" font-weight="700">₹14,000 <tspan fill="#8d9ea9" font-size="11">(24%)</tspan></text>
+      <rect x="30" y="20" width="286" height="6" rx="3" fill="#1b252f"/>
+      <rect x="30" y="20" width="68" height="6" rx="3" fill="#a855f7"/>
+    </g>
+
+    <!-- Category 3: Dining Out & Cafes -->
+    <g transform="translate(20, 142)">
+      <circle cx="10" cy="10" r="10" fill="#2d1d12"/>
+      <text x="10" y="14" text-anchor="middle" fill="#f59e0b" font-size="10">☕</text>
+      <text x="30" y="12" fill="#ffffff" font-size="13" font-weight="600">Dining &amp; Cafes</text>
+      <text x="316" y="12" text-anchor="end" fill="#ffffff" font-size="13" font-weight="700">₹10,500 <tspan fill="#8d9ea9" font-size="11">(18%)</tspan></text>
+      <rect x="30" y="20" width="286" height="6" rx="3" fill="#1b252f"/>
+      <rect x="30" y="20" width="51" height="6" rx="3" fill="#f59e0b"/>
+    </g>
+
+    <!-- Category 4: Shopping & Subscriptions -->
+    <g transform="translate(20, 188)">
+      <circle cx="10" cy="10" r="10" fill="#12252e"/>
+      <text x="10" y="14" text-anchor="middle" fill="#38bdf8" font-size="10">🛍️</text>
+      <text x="30" y="12" fill="#ffffff" font-size="13" font-weight="600">Shopping &amp; Tech</text>
+      <text x="316" y="12" text-anchor="end" fill="#ffffff" font-size="13" font-weight="700">₹8,150 <tspan fill="#8d9ea9" font-size="11">(14%)</tspan></text>
+      <rect x="30" y="20" width="286" height="6" rx="3" fill="#1b252f"/>
+      <rect x="30" y="20" width="40" height="6" rx="3" fill="#38bdf8"/>
+    </g>
+
+    <!-- Footer Summary note -->
+    <text x="20" y="244" fill="#00d09c" font-size="11" font-weight="600">✓ All categorized on-device with zero remote API transmission</text>
+  </g>
+
+  <!-- CARD 3: Cash Flow Chart Preview -->
+  <g transform="translate(32, 570)" filter="url(#cardShadowAna)">
+    <rect width="356" height="150" rx="20" fill="url(#cardBgAna)" stroke="#1a252f" stroke-width="1"/>
+    <text x="20" y="28" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="15" font-weight="700">30-Day Cash Flow Velocity</text>
+    <text x="20" y="46" fill="#8d9ea9" font-size="11">Surplus trend: +₹81,789.00</text>
+
+    <!-- Mini chart grid lines -->
+    <line x1="20" y1="70" x2="336" y2="70" stroke="#18232c" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="20" y1="105" x2="336" y2="105" stroke="#18232c" stroke-width="1" stroke-dasharray="3,3"/>
+
+    <!-- Wave Area & Path -->
+    <path d="M 24 110 Q 70 115 110 85 T 190 75 T 260 55 T 330 45" fill="none" stroke="#00d09c" stroke-width="2.6" stroke-linecap="round" filter="url(#emeraldGlowAna)"/>
+    <circle cx="330" cy="45" r="4" fill="#00d09c" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Label -->
+    <rect x="226" y="120" width="110" height="20" rx="10" fill="#0c2321"/>
+    <text x="281" y="134" text-anchor="middle" fill="#00d09c" font-size="10" font-weight="700">Net Positive +58%</text>
+  </g>
+
+  <!-- Bottom Navigation Bar -->
+  <g transform="translate(16, 764)">
+    <rect width="388" height="66" fill="#0d1318" stroke="#1a252f" stroke-width="1"/>
+    <!-- Home -->
+    <g transform="translate(56, 24)" fill="#687884">
+      <path d="M0 8 L10 0 L20 8 V18 H13 V12 H7 V18 H0 Z"/>
+      <text x="10" y="28" text-anchor="middle" font-size="9">Home</text>
+    </g>
+    <!-- Insights (Active) -->
+    <g transform="translate(148, 24)" fill="#00d09c">
+      <path d="M2 18 V10 H6 V18 Z M8 18 V4 H12 V18 Z M14 18 V12 H18 V18 Z"/>
+      <text x="10" y="28" text-anchor="middle" font-size="9" font-weight="700">Insights</text>
+    </g>
+    <!-- Budgets -->
+    <g transform="translate(240, 24)" fill="#687884">
+      <circle cx="10" cy="10" r="8" fill="none" stroke="#687884" stroke-width="2"/>
+      <text x="10" y="28" text-anchor="middle" font-size="9">Budgets</text>
+    </g>
+    <!-- Settings -->
+    <g transform="translate(330, 24)" fill="#687884">
+      <circle cx="10" cy="10" r="5" fill="none" stroke="#687884" stroke-width="2"/>
+      <text x="10" y="28" text-anchor="middle" font-size="9">Settings</text>
+    </g>
+  </g>
+</svg>
