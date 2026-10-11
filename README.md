@@ -36,6 +36,7 @@ rupeestream-showcase/
 ├── support.html                         # Support, FAQs & troubleshooting guides
 ├── about.html                           # Developer & product philosophy
 ├── 404.html                             # Not found fallback page
+├── app-ads.txt                          # Authorized Digital Sellers verification for AdMob
 │
 ├── assets/
 │   ├── branding/
