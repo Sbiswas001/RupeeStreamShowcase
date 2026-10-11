@@ -221,6 +221,20 @@ a:focus-visible, button:focus-visible {
   gap: 6px;
 }
 
+.nav-version-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
 .nav-links {
   display: flex;
   align-items: center;

@@ -3,6 +3,8 @@
 Public showcase website, privacy policy, and support documentation for **RupeeStream** — a privacy-focused, local-first personal finance manager for Android.
 
 - **Developer:** Sayan Biswas
+- **Version:** `v1.1.4 (Build 12)`
+- **Android Target SDK:** `37 (Android 15/16) · Min SDK 29 (Android 10+)`
 - **Android Package:** `sayan.apps.rupeestream`
 - **Developer & Support Email:** [sbiswas001.tech@gmail.com](mailto:sbiswas001.tech@gmail.com)
 - **Firebase Project ID:** `rupeestream`

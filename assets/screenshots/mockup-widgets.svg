@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 880" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for Phone Chassis -->
+    <linearGradient id="phoneChassisW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2924"/>
+      <stop offset="50%" stop-color="#121815"/>
+      <stop offset="100%" stop-color="#0a0f0d"/>
+    </linearGradient>
+
+    <!-- Wallpaper Gradient -->
+    <linearGradient id="homeWallpaper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1914"/>
+      <stop offset="35%" stop-color="#091f19"/>
+      <stop offset="70%" stop-color="#0f2b23"/>
+      <stop offset="100%" stop-color="#081410"/>
+    </linearGradient>
+
+    <!-- Widget Background Gradient (Glassmorphism dark) -->
+    <linearGradient id="widgetBg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16241e"/>
+      <stop offset="100%" stop-color="#0e1713"/>
+    </linearGradient>
+
+    <linearGradient id="widgetBg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14211c"/>
+      <stop offset="100%" stop-color="#0d1612"/>
+    </linearGradient>
+
+    <!-- Emerald Button Gradient -->
+    <linearGradient id="emeraldBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+
+    <!-- Card Shadow -->
+    <filter id="widgetShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Phone Outer Bezel -->
+  <rect x="6" y="6" width="408" height="868" rx="46" fill="url(#phoneChassisW)" stroke="#2b3b32" stroke-width="4"/>
+  
+  <!-- Screen Inner Display -->
+  <rect x="16" y="16" width="388" height="848" rx="38" fill="url(#homeWallpaper)"/>
+
+  <!-- Wallpaper Decorative Atmospheric Spheres -->
+  <circle cx="90" cy="180" r="140" fill="#10b981" opacity="0.08" filter="blur(40px)"/>
+  <circle cx="330" cy="520" r="160" fill="#065f46" opacity="0.12" filter="blur(45px)"/>
+
+  <!-- Punch-hole Camera -->
+  <circle cx="210" cy="34" r="6" fill="#000000"/>
+  <circle cx="211" cy="33" r="2" fill="#17251e"/>
+
+  <!-- Status Bar -->
+  <text x="36" y="38" fill="#e5e7eb" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">9:41</text>
+  <!-- WiFi & Battery Icons -->
+  <path d="M340 32a6 6 0 0 1 8 0 M336 29a12 12 0 0 1 16 0" fill="none" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="366" y="28" width="18" height="10" rx="3" fill="none" stroke="#e5e7eb" stroke-width="1.2"/>
+  <rect x="368" y="30" width="13" height="6" rx="1.5" fill="#10b981"/>
+  <path d="M385 31v4" stroke="#e5e7eb" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Home Screen Header (Date & Temperature) -->
+  <text x="36" y="78" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13" font-weight="500">Sunday, Oct 11 · 26°C</text>
+  <text x="36" y="104" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="-0.3">Jetpack Glance Widgets</text>
+
+  <!-- ====================================================================
+       WIDGET 1: Net Worth & Account Balance Glance Widget (4x2)
+       ==================================================================== -->
+  <g transform="translate(32, 126)" filter="url(#widgetShadow)">
+    <!-- Widget Body -->
+    <rect x="0" y="0" width="356" height="190" rx="24" fill="url(#widgetBg1)" stroke="rgba(16, 185, 129, 0.28)" stroke-width="1.2"/>
+    
+    <!-- Widget Header -->
+    <rect x="18" y="18" width="28" height="28" rx="8" fill="#10b981" fill-opacity="0.18"/>
+    <path d="M26 32h12 M32 26v12" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+    <text x="54" y="32" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">RUPEESTREAM · GLANCE</text>
+    <text x="54" y="44" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">Live On-Device Balances</text>
+
+    <!-- Safe to Spend Pill -->
+    <rect x="238" y="18" width="100" height="24" rx="12" fill="#10b981" fill-opacity="0.15" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+    <circle cx="248" cy="30" r="3" fill="#10b981"/>
+    <text x="256" y="34" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="700">Safe: ₹22,223</text>
+
+    <!-- Main Net Worth Figure -->
+    <text x="18" y="86" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="600">Total Net Worth</text>
+    <text x="18" y="122" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="30" font-weight="800" letter-spacing="-0.8">₹6,76,453.00</text>
+
+    <!-- Account Chips -->
+    <g transform="translate(18, 142)">
+      <rect x="0" y="0" width="98" height="32" rx="10" fill="#1c2c24" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="14" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="9" font-weight="600">SBI BANK</text>
+      <text x="10" y="26" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700">₹3,82,253</text>
+
+      <rect x="108" y="0" width="102" height="32" rx="10" fill="#1c2c24" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="118" y="14" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="9" font-weight="600">ICICI DIRECT</text>
+      <text x="118" y="26" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700">₹2,80,000</text>
+
+      <rect x="220" y="0" width="100" height="32" rx="10" fill="#1c2c24" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="230" y="14" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="9" font-weight="600">CASH WALLET</text>
+      <text x="230" y="26" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700">₹14,200</text>
+    </g>
+  </g>
+
+  <!-- ====================================================================
+       WIDGET 2: Budget Velocity Widget (4x2)
+       ==================================================================== -->
+  <g transform="translate(32, 332)" filter="url(#widgetShadow)">
+    <rect x="0" y="0" width="356" height="174" rx="24" fill="url(#widgetBg2)" stroke="rgba(56, 189, 248, 0.22)" stroke-width="1.2"/>
+
+    <text x="18" y="32" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">BUDGET VELOCITY</text>
+    <text x="260" y="32" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="600">Oct (Day 11)</text>
+
+    <!-- Monthly Spend Ratio -->
+    <text x="18" y="64" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="20" font-weight="800">₹26,450</text>
+    <text x="108" y="64" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13">/ ₹50,000 Cap</text>
+    <text x="300" y="64" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="14" font-weight="700">52%</text>
+
+    <!-- Progress Meter -->
+    <rect x="18" y="78" width="320" height="10" rx="5" fill="#1c2c24"/>
+    <rect x="18" y="78" width="168" height="10" rx="5" fill="url(#emeraldBtn)"/>
+
+    <!-- Category Bars -->
+    <g transform="translate(18, 104)">
+      <!-- Groceries -->
+      <text x="0" y="14" fill="#d1d5db" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="500">Groceries</text>
+      <text x="140" y="14" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">₹6,480 / ₹12,000</text>
+      <rect x="0" y="22" width="150" height="6" rx="3" fill="#1c2c24"/>
+      <rect x="0" y="22" width="81" height="6" rx="3" fill="#10b981"/>
+
+      <!-- Dining -->
+      <text x="170" y="14" fill="#d1d5db" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="500">Food &amp; Dining</text>
+      <text x="250" y="14" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">₹6,900 / ₹15,000</text>
+      <rect x="170" y="22" width="150" height="6" rx="3" fill="#1c2c24"/>
+      <rect x="170" y="22" width="69" height="6" rx="3" fill="#38bdf8"/>
+    </g>
+
+    <text x="18" y="156" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="600">✓ On track — Spending velocity is 14% below monthly allowance</text>
+  </g>
+
+  <!-- ====================================================================
+       WIDGET 3: Upcoming Bills & Quick Action "Mark as Paid" Widget (4x2)
+       ==================================================================== -->
+  <g transform="translate(32, 522)" filter="url(#widgetShadow)">
+    <rect x="0" y="0" width="356" height="198" rx="24" fill="url(#widgetBg1)" stroke="rgba(245, 158, 11, 0.25)" stroke-width="1.2"/>
+
+    <text x="18" y="32" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">UPCOMING BILLS &amp; EMIS</text>
+    <text x="246" y="32" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">AutoPay &amp; Quick Pay</text>
+
+    <!-- Bill Item 1: House Rent with Quick Action Button -->
+    <g transform="translate(18, 48)">
+      <rect x="0" y="0" width="320" height="62" rx="14" fill="#1b2721" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <circle cx="24" cy="31" r="14" fill="#fbbf24" fill-opacity="0.15"/>
+      <path d="M20 31l3 3 6-6" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" fill="none"/>
+      
+      <text x="46" y="26" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13" font-weight="700">House Rent</text>
+      <text x="46" y="42" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">Due in 3 days · ₹28,000</text>
+
+      <!-- Quick Action "Mark as Paid" Button -->
+      <g transform="translate(206, 14)">
+        <rect x="0" y="0" width="102" height="34" rx="17" fill="url(#emeraldBtn)"/>
+        <text x="51" y="21" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">✓ Mark Paid</text>
+      </g>
+    </g>
+
+    <!-- Bill Item 2: Mutual Fund SIP -->
+    <g transform="translate(18, 120)">
+      <rect x="0" y="0" width="320" height="60" rx="14" fill="#1b2721" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+      <circle cx="24" cy="30" r="14" fill="#10b981" fill-opacity="0.15"/>
+      <path d="M24 22v16 M20 26l4-4 4 4" stroke="#10b981" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+      <text x="46" y="26" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="13" font-weight="700">Mutual Fund SIP</text>
+      <text x="46" y="42" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10">Oct 15 · ₹20,000</text>
+
+      <!-- AutoPay Active Badge -->
+      <g transform="translate(216, 18)">
+        <rect x="0" y="0" width="92" height="24" rx="12" fill="rgba(16, 185, 129, 0.15)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+        <text x="46" y="16" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Inter', Roboto, sans-serif" font-size="10" font-weight="700" text-anchor="middle">AutoPay On</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Dock / Navigation Indicator at Bottom -->
+  <g transform="translate(140, 850)">
+    <rect x="0" y="0" width="140" height="4" rx="2" fill="#6b7280" opacity="0.6"/>
+  </g>
+</svg>
