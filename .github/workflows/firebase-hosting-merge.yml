@@ -9,7 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+
+      - name: Verify Firebase Service Account Secret
+        id: check_secret
+        env:
+          SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_RUPEESTREAM }}
+        run: |
+          if [ -z "$SERVICE_ACCOUNT" ]; then
+            echo "has_secret=false" >> $GITHUB_OUTPUT
+            echo "::warning title=Missing Secret::FIREBASE_SERVICE_ACCOUNT_RUPEESTREAM is not set in GitHub Repository Secrets. Automatic deploy skipped until secret is added."
+          else
+            echo "has_secret=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Deploy to Firebase Hosting
+        if: steps:check_secret.outputs.has_secret == 'true'
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RUPEESTREAM }}'
