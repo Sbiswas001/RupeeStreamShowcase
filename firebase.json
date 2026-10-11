@@ -11,8 +11,26 @@
       "**/node_modules/**",
       "README.md"
     ],
-    "cleanUrls": true,
+    "cleanUrls": false,
     "trailingSlash": false,
+    "rewrites": [
+      {
+        "source": "/about",
+        "destination": "/about.html"
+      },
+      {
+        "source": "/privacy-policy",
+        "destination": "/privacy-policy.html"
+      },
+      {
+        "source": "/support",
+        "destination": "/support.html"
+      },
+      {
+        "source": "/developer",
+        "destination": "/developer.html"
+      }
+    ],
     "headers": [
       {
         "source": "**",
@@ -54,6 +72,45 @@
           {
             "key": "Cache-Control",
             "value": "public, max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "google3f6b9c9d0b702598.html",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/html; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "sitemap.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400"
+          }
+        ]
+      },
+      {
+        "source": "robots.txt",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/plain; charset=utf-8"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400"
           }
         ]
       }

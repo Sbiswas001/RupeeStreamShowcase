@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rupeestream.web.app/sitemap.xml

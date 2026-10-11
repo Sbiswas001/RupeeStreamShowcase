@@ -39,6 +39,9 @@ rupeestream-showcase/
 ├── about.html                           # Developer & product philosophy
 ├── 404.html                             # Not found fallback page
 ├── app-ads.txt                          # Authorized Digital Sellers verification for AdMob
+├── sitemap.xml                          # XML Sitemap for search engines & SEO
+├── robots.txt                           # Search engine crawling rules & sitemap pointer
+├── google3f6b9c9d0b702598.html          # Google Search Console ownership verification
 │
 ├── assets/
 │   ├── branding/

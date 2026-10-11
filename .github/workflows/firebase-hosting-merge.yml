@@ -4,6 +4,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -23,7 +28,7 @@ jobs:
           fi
 
       - name: Deploy to Firebase Hosting
-        if: steps:check_secret.outputs.has_secret == 'true'
+        if: steps.check_secret.outputs.has_secret == 'true'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
