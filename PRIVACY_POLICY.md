@@ -1,6 +1,6 @@
 # Privacy Policy for RupeeStream
 
-**Last Updated**: October 24, 2026
+**Last Updated**: October 13, 2026
 
 **RupeeStream** ("we", "our", or "us") is committed to respecting and protecting your privacy. This Privacy Policy explains how data is handled when you use the RupeeStream mobile application on Android.
 
