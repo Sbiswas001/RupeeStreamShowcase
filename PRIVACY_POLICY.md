@@ -95,6 +95,6 @@ We may update this Privacy Policy periodically. Any updates will be published wi
 
 If you have questions or concerns regarding this Privacy Policy or your data privacy, please contact us:
 
-- **Email**: sayan.apps@gmail.com
+- **Email**: sbiswas001.tech@gmail.com
 - **GitHub Repository**: [https://github.com/Sbiswas001/RupeeStream](https://github.com/Sbiswas001/RupeeStream)
 - **Privacy Policy URL**: [https://rupeestream.web.app/privacy-policy](https://rupeestream.web.app/privacy-policy)
