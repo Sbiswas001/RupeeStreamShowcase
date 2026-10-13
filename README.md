@@ -34,7 +34,7 @@ RupeeStream is an Android personal finance application built on a strict **local
 ```text
 rupeestream-showcase/
 ├── index.html                           # Landing showcase page
-├── privacy-policy.html                  # Official 15-section Privacy Policy
+├── privacy-policy.html                  # Official 10-section Privacy Policy
 ├── support.html                         # Support, FAQs & troubleshooting guides
 ├── about.html                           # Developer & product philosophy
 ├── 404.html                             # Not found fallback page
